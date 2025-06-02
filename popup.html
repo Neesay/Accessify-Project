@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>accessify</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>accessify</h1>
+
+  <!-- Epilepsy Mode Button -->
+  <button id="epilepsyBtn">Epilepsy Mode</button>
+
+  <!-- Dyslexia Mode -->
+  <h3>Dyslexia Mode</h3>
+  <select id="dyslexiaLevel">
+    <option value="none">None</option>
+    <option value="mild">Mild</option>
+    <option value="moderate">Moderate</option>
+    <option value="strong">Strong</option>
+  </select>
+
+  <!-- Colour Blind Mode -->
+  <h3>Colour Blind Mode</h3>
+  <select id="colorBlindToggle">
+    <option value="none">None</option>
+    <option value="protanopia">Protanopia</option>
+    <option value="deuteranopia">Deuteranopia</option>
+    <option value="tritanopia">Tritanopia</option>
+    <option value="high-contrast">High Contrast</option>
+  </select>
+
+  <!-- Text-to-Speech -->
+  <h3>Text-to-Speech</h3>
+  <div class="tts-row">
+    <button id="speakButton">Read Selected Text</button>
+    <button id="stopButton" disabled>Stop</button>
+  </div>
+
+  <!-- Reading Speed -->
+  <div class="speed-row">
+    <label for="speedSlider" class="speed-label">Speed</label>
+    <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+  </div>
+
+  <!-- Irlen Mode Button -->
+  <button id="irlenBtn">Irlen Mode</button>
+
+  <!-- Summarise Button -->
+  <button id="summariseBtn">Summarise</button>
+
+  <!-- Learn Button -->
+  <button id="linkButton" class="learn-btn">Learn</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Reset default margins/padding */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fixed popup size */
+body {
+  width: 280px;
+  height: 500px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+
+  /* Pink radial gradient background */
+  background: radial-gradient(
+    ellipse farthest-corner at center,
+    #ffc0cb 0%,
+    #ffc0cb 80%,
+    white 100%
+  );
+  background-size: 100% 100%;
+  border: 2px solid #e0d4b8;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Title styling */
+h1 {
+  color: black;
+  margin: 20px 0 20px; /* more space above and below */
+}
+
+/* Subheadings with minimal margin */
+h3 {
+  color: black;
+  margin: 8px 0 4px;
+}
+
+/* Buttons: Rounded corners, black text */
+button {
+  width: 90%;
+  padding: 10px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover:enabled {
+  background-color: #f0f0f0;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: default;
+}
+
+/* Dropdown: Rounded corners */
+select {
+  width: 90%;
+  padding: 8px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 13px;
+  color: black;
+  background-color: white;
+}
+
+/* TTS row: 2 buttons horizontally (75% & 25%) */
+.tts-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 4px auto;
+}
+
+.tts-row button:first-child {
+  width: 75%;
+}
+
+.tts-row button:last-child {
+  width: 20%;
+}
+
+/* Speed row: label on the left (bold), slider on the right */
+.speed-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 4px auto;
+}
+
+/* Bold label for speed, no big margin */
+.speed-label {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+/* Slider closer to label */
+.speed-row input[type="range"] {
+  width: 60%;
+  -webkit-appearance: none;
+  background: #ddd;
+  height: 6px;
+  border-radius: 5px;
+  outline: none;
+  margin: 0;
+}
+
+.speed-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: white;
+  border: 1px solid #ccc;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Extra spacing for Learn button if desired */
+.learn-btn {
+  margin-top: 4px;
+}
