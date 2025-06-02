@@ -1,6 +1,6 @@
-/************************************
+/**
  * 1) Video Processing (Epilepsy Mode)
- ************************************/
+*/
 function createOverlay(message) {
   const overlay = document.createElement("div");
   overlay.id = "gpt-epilepsy-overlay";
@@ -117,9 +117,9 @@ window.replaceVideo = replaceVideo;
 console.log("Content script loaded; replaceVideo is now available on window.");
 
 
-/****************************************
+/**
  * 2) Accessibility & TTS Functions
- ****************************************/
+ */
 chrome.storage.sync.get(["dyslexiaLevel", "colorBlindMode"], (data) => {
   applyDyslexiaMode(data.dyslexiaLevel || "none");
   applyColorBlindFilter(data.colorBlindMode || "none");
@@ -199,9 +199,10 @@ function applyColorBlindFilter(type) {
 }
 
 
-/****************************************
+/**
  * 3) Irlen Mode (Reduce Framerate)
- ****************************************/
+ */
+
 let reduceFrameRate = false;
 let lastScrollTime = 0;
 let lastScrollPos = { x: 0, y: 0 };
@@ -229,12 +230,12 @@ function handleScroll(e) {
 window.addEventListener("scroll", handleScroll, { passive: false });
 
 
-/****************************************
+/**
  * 4) Summarize Paragraphs with ChatGPT
- ****************************************/
+ */
 
 // Hard-code your key for local testing (example only)
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 const MAX_RETRIES = 3;
 const INITIAL_BACKOFF_MS = 2000;
@@ -318,9 +319,9 @@ async function summarizeAllParagraphs() {
 }
 
 
-/****************************************
+/**
  * 5) Listen for Messages from Popup
- ****************************************/
+ */
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // Dyslexia
   if (message.action === "changeDyslexiaLevel") {
