@@ -9,6 +9,8 @@ A Chrome (Manifest V3) browser extension **plus** a small Flask micro‑service
 * In‑page text‑to‑speech (Web Speech API)
 * One‑click paragraph summariser powered by OpenAI GPT‑4o
 
+And a Learning Zone within the extension that allows you to improve web surfing and digestion of content.
+
 This README is patterned after my *HorseRaceSimulator* guide—just new content for **Accessify**.
 
 ---
