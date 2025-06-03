@@ -15,7 +15,7 @@ services:
 
   next:
     build:
-      context: hacklondonproject
+      context: learn
     ports:
       - "3000:3000"
     tty: true
