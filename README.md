@@ -102,8 +102,6 @@ npm run dev          # starts Flask on :5000 + Next.js on :3000
 
 `http://localhost:3000` hosts a small Next.js playground that embeds YouTube iframes and sample articles so you can test every feature without leaving localhost.
 
-*(Screenshots live in `/docs/screens/`—add your own or swap these placeholders.)*
-
 ---
 
 ## Contributing
